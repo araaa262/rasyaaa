@@ -43,8 +43,8 @@
 <meta name="twitter:description" content="Tools Alight Motion Send & Verify Magic Link. Kirim & verifikasi magic link Alight Motion dengan mudah, cepat, dan langsung dari core.">
 <meta name="twitter:image" content="https://files.catbox.moe/7wccr4.jpg">
 <meta name="twitter:image:alt" content="RaaAm — AM Send & Verify Banner">
-<meta name="twitter:creator" content="@raaa">
-<meta name="twitter:site" content="@raaa">
+<meta name="twitter:creator" content="@ancklo">
+<meta name="twitter:site" content="@ancklo">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1431,6 +1431,131 @@ button,a,[role="button"] { -webkit-tap-highlight-color:transparent; }
 button:focus-visible,a:focus-visible { outline:3px dashed #168bd0!important; outline-offset:3px; }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; scroll-behavior:auto!important; transition-duration:.01ms!important; } }
 
+
+
+/* === SKY CLOUD NEOBRUTALISM • POLISH UPDATE === */
+:root {
+  --sky-ink: #102a43;
+  --sky-blue: #2aa9f7;
+  --sky-light: #e8f7ff;
+  --sky-border: 2px solid var(--sky-ink);
+  --sky-shadow: 5px 5px 0 var(--sky-ink);
+  --sky-shadow-hover: 7px 8px 0 var(--sky-ink);
+}
+html { scroll-padding-top: 24px; }
+body {
+  isolation: isolate;
+  background-color: #f2faff;
+  background-image:
+    radial-gradient(ellipse at 12% 8%, rgba(255,255,255,.98) 0, transparent 34%),
+    radial-gradient(ellipse at 90% 18%, rgba(177,229,255,.72) 0, transparent 32%),
+    radial-gradient(ellipse at 45% 100%, rgba(212,242,255,.8) 0, transparent 40%),
+    linear-gradient(145deg,#f7fcff 0%,#eaf7ff 48%,#f8fcff 100%);
+}
+body::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  width: 270px;
+  height: 150px;
+  right: -80px;
+  top: 20%;
+  border: 2px solid rgba(16,42,67,.09);
+  border-radius: 100px;
+  background: rgba(255,255,255,.32);
+  box-shadow: -35px 35px 0 -12px rgba(255,255,255,.32), -70px 15px 0 -20px rgba(255,255,255,.42);
+  filter: blur(.2px);
+  pointer-events: none;
+  animation: cloudFloat 9s ease-in-out infinite;
+}
+::selection { color: #102a43; background: #a9e2ff; }
+button, input, textarea, select { font: inherit; }
+button, a, [role="button"] { touch-action: manipulation; }
+button:disabled { cursor: wait !important; opacity: .68; transform: none !important; }
+.header, .section, .about, .card, .loading-card, .results, .form-body, .loading-visual {
+  border: var(--sky-border) !important;
+  border-radius: 18px !important;
+  box-shadow: var(--sky-shadow) !important;
+  transition: box-shadow .22s ease, transform .22s ease, border-color .22s ease;
+}
+.header:hover, .section:hover, .about:hover, .card:hover, .loading-card:hover, .results:hover {
+  box-shadow: 6px 7px 0 var(--sky-ink) !important;
+}
+.header-top, .term-head, .sidebar-head {
+  background: linear-gradient(110deg,#bfeaff,#e7f8ff 58%,#c9edff) !important;
+  border-bottom: var(--sky-border) !important;
+}
+.title, h1, h2, h3 { text-wrap: balance; }
+.title { letter-spacing: -.045em; }
+.title span { color: #087fca !important; }
+.subtitle, .about-desc, .modal-desc { line-height: 1.75; }
+.badge, .status, .pill, .tag {
+  border: 2px solid var(--sky-ink) !important;
+  box-shadow: 2px 2px 0 var(--sky-ink) !important;
+  background: #dff4ff !important;
+}
+.execute-btn, .modal-join-btn {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--sky-ink) !important;
+  border-radius: 12px !important;
+  box-shadow: 4px 4px 0 var(--sky-ink) !important;
+  color: var(--sky-ink) !important;
+  background: linear-gradient(110deg,#8bdcff,#c9f0ff,#8bdcff) !important;
+  background-size: 220% 100% !important;
+  animation: skyShimmer 6s ease-in-out infinite;
+  font-weight: 800 !important;
+}
+.execute-btn:hover, .modal-join-btn:hover {
+  transform: translate(-2px,-3px) rotate(-.4deg) !important;
+  box-shadow: var(--sky-shadow-hover) !important;
+  background-position: 100% 50% !important;
+}
+.action-btn, .sidebar-item, .copy-value, .channel-link, .result-actions button, .about-footer a {
+  border: 2px solid var(--sky-ink) !important;
+  border-radius: 11px !important;
+  box-shadow: 3px 3px 0 var(--sky-ink) !important;
+  transition: transform .18s cubic-bezier(.2,.8,.2,1), box-shadow .18s ease, background .18s ease !important;
+  font-weight: 800 !important;
+}
+.action-btn:hover, .sidebar-item:hover, .copy-value:hover, .channel-link:hover, .result-actions button:hover, .about-footer a:hover {
+  transform: translate(-2px,-2px) !important;
+  box-shadow: 5px 5px 0 var(--sky-ink) !important;
+  background-color: #a8e3ff !important;
+}
+.action-btn:active, .sidebar-item:active, .copy-value:active, .channel-link:active, .execute-btn:active, .modal-join-btn:active {
+  transform: translate(2px,2px) scale(.985) !important;
+  box-shadow: 1px 1px 0 var(--sky-ink) !important;
+}
+input, textarea, select, .input-wrapper input, .field input, .field textarea {
+  border: 2px solid var(--sky-ink) !important;
+  border-radius: 11px !important;
+  min-height: 44px;
+  transition: box-shadow .18s ease, background .18s ease;
+}
+input:focus, textarea:focus, select:focus, .input-wrapper input:focus, .field input:focus, .field textarea:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 4px rgba(42,169,247,.22), 3px 3px 0 var(--sky-ink) !important;
+}
+.social-btn { border-radius: 13px !important; }
+.icon-wrap { filter: drop-shadow(0 8px 0 rgba(16,42,67,.06)); }
+.sidebar { box-shadow: 9px 0 0 rgba(16,42,67,.08) !important; }
+.sidebar-brand { border-radius: 14px !important; }
+.modal { border: 2px solid var(--sky-ink) !important; box-shadow: 8px 8px 0 var(--sky-ink) !important; }
+.toast { border: 2px solid var(--sky-ink) !important; border-radius: 14px !important; box-shadow: 4px 4px 0 var(--sky-ink) !important; }
+.empty { border-radius: 14px !important; }
+@keyframes skyShimmer { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+@media (max-width: 600px) {
+  body { background-attachment: scroll; }
+  .header, .section, .about, .card, .loading-card, .results, .form-body, .loading-visual { box-shadow: 3px 3px 0 var(--sky-ink) !important; }
+  .execute-btn, .modal-join-btn { width: 100%; min-height: 46px; }
+  .social-grid { gap: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body::after, .execute-btn, .modal-join-btn { animation: none !important; }
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
+
 </style>
 </head>
 
@@ -1504,7 +1629,7 @@ button:focus-visible,a:focus-visible { outline:3px dashed #168bd0!important; out
           <span class="sidebar-item-label">Telegram</span>
           <i class="fa-solid fa-chevron-right sidebar-item-arrow"></i>
         </a>
-        <a class="sidebar-item tiktok" href="https://tiktok.com/@raaa" target="_blank" rel="noopener">
+        <a class="sidebar-item tiktok" href="https://tiktok.com/@ancklo" target="_blank" rel="noopener">
           <div class="sidebar-item-icon"><i class="fa-brands fa-tiktok"></i></div>
           <span class="sidebar-item-label">TikTok</span>
           <i class="fa-solid fa-chevron-right sidebar-item-arrow"></i>
@@ -1700,7 +1825,7 @@ button:focus-visible,a:focus-visible { outline:3px dashed #168bd0!important; out
 
   <section class="about">
     <div class="about-brand">
-      xDonz<span>Am</span>
+      xRaa<span>Am</span>
     </div>
 
     <p class="about-desc">
@@ -1715,7 +1840,7 @@ button:focus-visible,a:focus-visible { outline:3px dashed #168bd0!important; out
       <a class="social-btn telegram" href="https://t.me/raaa" target="_blank" rel="noopener" title="Telegram">
         <i class="fa-brands fa-telegram"></i>
       </a>
-      <a class="social-btn tiktok" href="https://tiktok.com/@raaa" target="_blank" rel="noopener" title="TikTok">
+      <a class="social-btn tiktok" href="https://tiktok.com/@ancklo" target="_blank" rel="noopener" title="TikTok">
         <i class="fa-brands fa-tiktok"></i>
       </a>
       <a class="social-btn whatsapp" href="https://whatsapp.com/channel/0029VbDPWOjFMqrdmBdXu82R" target="_blank" rel="noopener" title="WhatsApp Channel">
